@@ -1,0 +1,49 @@
+# 依赖
+node_modules/
+package-lock.json
+
+# 构建产物
+out/
+dist/
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 敏感数据和本地配置
+contents.json
+personas.json
+analytics.json
+platforms.json
+material-sync-state.json
+auto-publish-config.json
+*.db
+
+# Cookie 和缓存
+cache/
+profiles/
+cookies*.json
+
+# 测试文件
+test-*.js
+test-*.cjs
+url_check_results_*.json
+
+# 临时文件
+*.backup
+*.tmp
+
+# 素材文件（用户数据，不提交到仓库）
+materials/
+post/
+fixtures/
+
+# 压缩包
+*.tar.gz
+*.zip
+
+# Local files
+.claude/
+.env
+mcp-version.json
