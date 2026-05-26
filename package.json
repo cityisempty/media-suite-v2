@@ -19,7 +19,6 @@
     "package:win": "electron-vite build && electron-builder --win"
   },
   "dependencies": {
-    "canvas": "^3.2.3",
     "echarts": "^6.0.0",
     "lucide-vue-next": "^1.0.0"
   },
