@@ -1,0 +1,60 @@
+appId: com.psycenter.media-automation
+productName: 心理学媒体助手
+copyright: Copyright © 2026 PsyCenter
+directories:
+  buildResources: resources
+  output: dist
+
+mac:
+  category: public.app-category.productivity
+  icon: resources/icon.icns
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  target:
+    - target: dmg
+      arch: [x64, arm64]
+    - target: zip
+      arch: [x64, arm64]
+  extraResources:
+    - from: "tools/bin/xiaohongshu-mcp-darwin-arm64"
+      to: "tools/bin/xiaohongshu-mcp-darwin-arm64"
+    - from: "tools/bin/xiaohongshu-login-darwin-arm64"
+      to: "tools/bin/xiaohongshu-login-darwin-arm64"
+
+win:
+  icon: resources/icon.ico
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: portable
+      arch: [x64]
+  extraResources:
+    - from: "tools/bin/xiaohongshu-mcp-windows-amd64.exe"
+      to: "tools/bin/xiaohongshu-mcp-windows-amd64.exe"
+    - from: "tools/bin/xiaohongshu-login-windows-amd64.exe"
+      to: "tools/bin/xiaohongshu-login-windows-amd64.exe"
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  runAfterFinish: true
+  installerIcon: resources/icon.ico
+  uninstallerIcon: resources/icon.ico
+  installerHeaderIcon: resources/icon.ico
+  shortcutName: 心理学媒体助手
+
+dmg:
+  title: 心理学媒体助手
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: link
+      path: /Applications
+
+files:
+  - "out/**/*"
+  - "resources/icon.png"
