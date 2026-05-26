@@ -1,0 +1,29 @@
+[
+  {
+    "id": "4",
+    "userId": "5",
+    "personality": "专业、温暖、有亲和力",
+    "age": 25,
+    "languageStyle": "轻松活泼，适当使用 emoji",
+    "gender": "unknown",
+    "expertiseFields": [],
+    "creativeFields": [],
+    "publishSchedule": {
+      "timeSlots": [],
+      "frequency": 1,
+      "style": ""
+    },
+    "isActive": true,
+    "updatedAt": "2026-05-19T02:00:56.818Z",
+    "subscription": {
+      "id": "4",
+      "userId": "",
+      "planId": "2",
+      "status": "active",
+      "startsAt": "2026-05-12T10:56:42.000000Z",
+      "endsAt": "2026-06-12T10:56:42.000000Z",
+      "dailyQuota": 1,
+      "monthlyQuota": 31
+    }
+  }
+]
