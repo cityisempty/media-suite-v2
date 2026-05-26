@@ -1,0 +1,40 @@
+{
+  "name": "media-automation-suite",
+  "version": "0.1.9",
+  "type": "module",
+  "description": "跨平台媒体发布助手 - 小红书等平台内容自动发布",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "check": "node scripts/check-workspace.mjs",
+    "task:sample": "node scripts/run-sample-task.mjs",
+    "desktop:dev": "node scripts/run-desktop-dev.mjs",
+    "login:xhs": "node scripts/xhs-login.mjs",
+    "install:mcp": "mkdir -p tools/bin && echo 'Please download xpzouying/xiaohongshu-mcp binary and place it in tools/bin/xhs-mcp'",
+    "dev": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 electron-vite dev",
+    "dev:verbose": "cross-env DEBUG=* ELECTRON_ENABLE_LOGGING=1 NODE_TLS_REJECT_UNAUTHORIZED=0 electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "package": "electron-vite build && electron-builder",
+    "package:mac": "electron-vite build && electron-builder --mac",
+    "package:win": "electron-vite build && electron-builder --win"
+  },
+  "dependencies": {
+    "canvas": "^3.2.3",
+    "echarts": "^6.0.0",
+    "lucide-vue-next": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.0",
+    "cross-env": "^10.1.0",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^2.3.0",
+    "pinia": "^2.3.0",
+    "playwright": "latest",
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0",
+    "vue": "^3.5.0",
+    "vue-router": "^4.5.0",
+    "vue-tsc": "^2.2.0"
+  }
+}
